@@ -4,6 +4,7 @@ require('dotenv').config();
 const userAuthRouter = require('../public/routers/userAuthRouter');
 const bodyParser = require("body-parser");
 const app = express();
+const cors = require("cors");
 
 const PORT =  process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));

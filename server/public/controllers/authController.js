@@ -47,6 +47,7 @@ class authController {
                 return res.status(400).json({message: "Username or password is incorrect"});
             }
             const token = jwtMiddleware.getToken(user._id,user.username);
+            
             return res.json({token})
 
         }catch (e) {
